@@ -6,7 +6,7 @@ public class MathUtils {
      */
     public static double divideNumbers(int dividend, int divisor) {
         /* Do some casual division ... Super easy ... Shouldn't be any problems here */
-        double res = dividend / divisor;
+        double res = (double) dividend / divisor;
         /* Return the DEFINITELY CORRECT result */
         return res;
     }
@@ -35,11 +35,14 @@ public class MathUtils {
 
         /* If it's a negative exponent, we should invert it! */
         if (isNegative) {
+            //System.out.println(res);
             double dividedRes = divideNumbers(1, res);
+            //System.out.println(dividedRes);
             return dividedRes;
         }
         /* Otherwise, we are safe to just return the result */
         else {
+            //System.out.println(res);
             return res;
         }
     }    
